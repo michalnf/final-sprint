@@ -2,7 +2,7 @@
 function createArr(size){
     var arr=[]
     for(var j=0; j < size ; j++){
-      arr.push(j)
+      arr.push(getRandomInt(0, gLevel.SIZE));
     }
     return arr;
   }
@@ -44,7 +44,7 @@ function getTime() {
   function renderTime() {
     var msTimeDiff = Date.now() - timeStart;
     var timeDiffStr = new Date(msTimeDiff).toISOString().slice(17, -1);
-    timerP.innerText = timeDiffStr;
+    elTimerP.innerText = timeDiffStr;
   }
 
 
